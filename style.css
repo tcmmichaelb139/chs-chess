@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;500&display=swap");
+
+:root {
+  --bg-color: #171717; /* tailwind neutral 900 */
+  --bg-alt-color: #262626; /* tailwind neutral 800  */
+  --fg-color: #a3a3a3; /* tailwind neutral 400 */
+  --blue: #3b82f6; /* tailwind blue 500  */
+  --sky: #0ea5e9; /* tailwind sky 500  */
+  --violet: #8b5cf6; /* tailwind violet 500  */
+  --amber: #f89e0b; /* tailwind amber 500 */
+  --lime: #84cc16; /* tailwind lime 500  */
+  --emerald: #10b981; /* tailwind emerald 500*/
+}
+
+body {
+  background-color: var(--bg-alt-color);
+  color: var(--fg-color);
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend", sans-serif;
+  font-weight: 300;
+  font-size: 150%;
+}
+
+a {
+  color: var(--fg-color);
+  text-decoration: none;
+}
+
+p {
+  line-height: 2rem;
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.nav {
+  position: sticky;
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  z-index: 100;
+}
+
+.nav li {
+  list-style: none;
+}
+
+.nav-item {
+  margin: 0 1rem;
+}
+
+.nav li:first-child {
+  margin-right: auto;
+}
+
+.nav-logo {
+  font-weight: 500;
+  margin: 0 1rem;
+  padding: 0;
+}
+
+.nav a {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-item a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--amber);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-item a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.content {
+  background-color: var(--bg-color);
+  margin: 1rem 1rem;
+  padding: 1.5rem;
+}
+
+.footer {
+  position: fixed;
+  background-color: var(--bg-color);
+  width: 100%;
+  bottom: 0;
+  margin: 0;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
