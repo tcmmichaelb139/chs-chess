@@ -18,6 +18,11 @@ body {
   color: var(--bg);
   scroll-behavior: smooth;
   font-weight: 300;
+  background: url(../images/background.png);
+  background-repeat: repeat;
+  background-size: auto 8rem;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 h1 {
@@ -39,7 +44,7 @@ h1 {
   align-items: center;
   overflow: hidden;
   height: inherit;
-  background: url(../images/chschess.png);
+  background: url(../images/ccschess.png);
   background-repeat: repeat;
   background-size: auto 8rem;
   background-position: center;
@@ -66,35 +71,22 @@ h1 {
 }
 
 .bannerLinks {
-  background-color: var(--fg);
-  border: 5px solid var(--bg);
-  padding: 1rem 3rem;
-  margin: 1rem 1rem;
+  margin: 2rem 1rem;
 }
 
 .bannerLinks a {
+  background-color: var(--fg);
   color: var(--bg);
+  padding: 1rem 3rem;
   text-decoration: none;
   position: relative;
+  border: 3px solid var(--bg);
+  transition: color 0.3s, background-color 0.3s;
 }
 
-.bannerLinks a::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  border-radius: 4px;
+.bannerLinks a:hover {
+  color: var(--fg);
   background-color: var(--bg);
-  bottom: 0;
-  left: 0;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
-}
-
-.bannerLinks a:hover::before {
-  transform-origin: left;
-  transform: scaleX(1);
 }
 
 .content {
